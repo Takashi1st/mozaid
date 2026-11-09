@@ -1,21 +1,13 @@
 services:
-  mozaid-app:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: mozaid-platform
     restart: unless-stopped
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     environment:
-      - NODE_ENV=production
-      - PORT=3000
-      - DATABASE_URL=postgres://postgres:Kiss0OduwEqtGlqYmAMyedKswhoHiGcy2jkmWxZge95ELjeoV29tRrnmqxZvetuo@161.97.152.98:9374/postgres
-      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - DATABASE_URL=${DATABASE_URL}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
       - GEMINI_MODEL=${GEMINI_MODEL:-gemma-4-31b-it}
-    healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 15s
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-}
