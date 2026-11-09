@@ -22,7 +22,7 @@ import {
 export default function AdminOverviewDashboard() {
   const kpiStats = [
     {
-      title: 'إجمالي حجم التداولات (GMV)',
+      title: 'إجمالي حجم التداولات',
       value: '227,500,000 ر.ي',
       subValue: '+ $192,000 USD • + 145,000 SAR',
       trend: '+18.4% هذا الأسبوع',
@@ -31,7 +31,7 @@ export default function AdminOverviewDashboard() {
       bgColor: 'bg-emerald-500/10',
     },
     {
-      title: 'عوائد عمولة المنصة (2.5%)',
+      title: 'عوائد عمولة المنصة 2.5%',
       value: '5,687,500 ر.ي',
       subValue: '+$4,800 USD صافي الأتعاب المحصلة',
       trend: 'محسوبة آلياً بنسبة صفر تسريب',
@@ -42,15 +42,15 @@ export default function AdminOverviewDashboard() {
     {
       title: 'الغرف الحية النشطة الآن',
       value: '6 مزادات • 4 مناقصات',
-      subValue: '3 غرف في وضع التمديد Anti-Sniping',
-      trend: 'زمن استجابة البث 110ms',
+      subValue: '3 غرف في وضع التمديد الحاسم لمنع الاحتكار',
+      trend: 'تزامن حي فوري',
       icon: Activity,
       color: 'text-amber-400',
       bgColor: 'bg-amber-500/10',
     },
     {
       title: 'طلبات التدقيق والاعتماد',
-      value: '4 سندات • 3 توثيق KYC',
+      value: '4 سندات • 3 توثيق هويات',
       subValue: '1 قضية نزاع تحكيم قيد النظر',
       trend: 'متوسط زمن الاعتماد 9 دقائق',
       icon: Clock,
@@ -68,10 +68,10 @@ export default function AdminOverviewDashboard() {
   ];
 
   const systemAuditLog = [
-    { time: '10:48 ص', actor: 'النظام الآلي (Anti-Sniping)', action: 'تمديد تلقائي +120 ثانية لمزاد تويوتا لاندكروزر 2022 بصنعاء' },
-    { time: '10:35 ص', actor: 'المشرف المالي (ياسر)', action: 'اعتماد سند إيداع KR-772819 بنك الكريمي بمبلغ 1,500,000 ر.ي' },
+    { time: '10:48 ص', actor: 'النظام التلقائي', action: 'تمديد تلقائي +120 ثانية لمزاد تويوتا لاندكروزر 2022 بصنعاء' },
+    { time: '10:35 ص', actor: 'المشرف المالي', action: 'اعتماد سند إيداع KR-772819 بنك الكريمي بمبلغ 1,500,000 ر.ي' },
     { time: '10:12 ص', actor: 'رادار مكافحة الاحتيال', action: 'رصد تكرار IP للمزايد #u-109 مع بائع مزاد أجهزة حاسوب (تنبيه درجة متوسطة)' },
-    { time: '09:50 ص', actor: 'نظام الضمان Escrow', action: 'إفراج تلقائي لمبلغ 18,200 SAR بعد انتهاء مهلة 48 ساعة دون نزاع' },
+    { time: '09:50 ص', actor: 'نظام الضمان المالي', action: 'إفراج تلقائي لمبلغ 18,200 SAR بعد انتهاء مهلة 48 ساعة دون نزاع' },
   ];
 
   return (
@@ -80,7 +80,7 @@ export default function AdminOverviewDashboard() {
       {/* عنوان المركز ورسالة الترحيب */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-black text-white">لوحة القيادة والمؤشرات العامة (Command Dashboard)</h1>
+          <h1 className="text-2xl font-black text-white">لوحة القيادة والمؤشرات العامة</h1>
           <p className="text-xs text-slate-400 mt-1">
             مراقبة الأداء المالي، نشاط الغرف الحية، طوابير التدقيق، ومؤشرات الأمان عبر المحافظات اليمنية.
           </p>
@@ -130,7 +130,7 @@ export default function AdminOverviewDashboard() {
         })}
       </div>
 
-      {/* 2. مراكز الإدارة السريعة (Direct Portals) */}
+      {/* 2. مراكز الإدارة المباشرة */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         <Link
@@ -162,7 +162,7 @@ export default function AdminOverviewDashboard() {
             <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 font-mono">3 معلقة</span>
           </div>
           <div>
-            <h3 className="font-bold text-white text-sm">توثيق الهويات KYC</h3>
+            <h3 className="font-bold text-white text-sm">توثيق الهويات الوطنية</h3>
             <p className="text-xs text-slate-400 mt-1">
               تدقيق بطاقات الهوية الشخصية ومطابقة صور السيلفي واعتماد الشارات.
             </p>
@@ -195,12 +195,12 @@ export default function AdminOverviewDashboard() {
             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition">
               <Radar className="w-5 h-5" />
             </div>
-            <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 font-mono">AI Active</span>
+            <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-950 text-indigo-300 font-mono">نشط</span>
           </div>
           <div>
             <h3 className="font-bold text-white text-sm">رادار مكافحة الاحتيال</h3>
             <p className="text-xs text-slate-400 mt-1">
-              كشف المزايدات الوهمية وتقارب الـ IP وحظر حسابات الظل.
+              كشف المزايدات الوهمية وتقارب العناوين وحظر حسابات الظل.
             </p>
           </div>
         </Link>
@@ -215,7 +215,7 @@ export default function AdminOverviewDashboard() {
           <div className="flex items-center justify-between border-b border-slate-800 pb-3">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-emerald-400" />
-              <h3 className="font-bold text-white text-sm">التوزيع الجغرافي لحجم التداولات (Regional GMV)</h3>
+              <h3 className="font-bold text-white text-sm">التوزيع الجغرافي لحجم التداولات</h3>
             </div>
             <span className="text-xs text-slate-400 font-mono">المحافظات اليمنية</span>
           </div>
@@ -242,9 +242,9 @@ export default function AdminOverviewDashboard() {
           <div className="flex items-center justify-between border-b border-slate-800 pb-3">
             <h3 className="font-bold text-white text-sm flex items-center gap-2">
               <Clock className="w-4 h-4 text-amber-400" />
-              <span>سجل العمليات والرقابة (Audit Trail)</span>
+              <span>سجل العمليات والرقابة الميدانية</span>
             </h3>
-            <span className="text-[10px] text-slate-500 font-mono">Realtime Log</span>
+            <span className="text-[10px] text-slate-500 font-mono">سجل لحظي</span>
           </div>
 
           <div className="space-y-3">

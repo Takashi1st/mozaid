@@ -60,7 +60,7 @@ const INITIAL_INCIDENTS: ShillIncident[] = [
     carrierProvider: 'YOU 4G Taiz',
     shillRiskScore: 64,
     riskLevel: 'HIGH',
-    detectionReason: 'نمط مزايدة آلي (Bot-like intervals) بفارق 400 مللي ثانية متكرر لرفع الحد الأدنى.',
+    detectionReason: 'نمط مزايدة آلي بفارق 400 مللي ثانية متكرر لرفع الحد الأدنى.',
     detectedAt: 'منذ 35 دقيقة',
     status: 'monitoring',
   },
@@ -280,19 +280,19 @@ export default function AdminAiSecurityPage() {
           <div className="rounded-3xl bg-slate-900 border border-slate-800 p-6 space-y-5">
             <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-3 flex items-center gap-2">
               <ShieldAlert className="w-4 h-4 text-indigo-400" />
-              <span>معايير درع كشف الاحتيال (Rules)</span>
+              <span>معايير درع كشف الاحتيال</span>
             </h3>
 
             <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
               <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="font-bold text-white block">1. تتبع الـ Subnet وعناوين IP:</span>
+                <span className="font-bold text-white block">1. تتبع نطاقات الاتصال:</span>
                 <p className="text-slate-400 text-[11px]">
                   مقارنة عناوين الاتصال بين صاحب المزاد وأي مزايد على نفس السلعة لمنع رفع الأسعار المصطنع.
                 </p>
               </div>
 
               <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-                <span className="font-bold text-white block">2. بصمة الجهاز (Device Fingerprint):</span>
+                <span className="font-bold text-white block">2. بصمة الجهاز التقنية:</span>
                 <p className="text-slate-400 text-[11px]">
                   تجميد بصمة متصفح الهاتف أو الكمبيوتر لمنع المحتال من إعادة إنشاء حسابات بديلة من نفس الجهاز.
                 </p>
@@ -310,7 +310,7 @@ export default function AdminAiSecurityPage() {
           <div className="rounded-3xl bg-slate-900 border border-slate-800 p-6 space-y-4">
             <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-3 flex items-center gap-2">
               <Ban className="w-4 h-4 text-rose-400" />
-              <span>القائمة السوداء النشطة (Blacklist)</span>
+              <span>القائمة السوداء النشطة</span>
             </h3>
 
             <div className="space-y-2 text-xs">

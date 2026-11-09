@@ -163,7 +163,7 @@ export default function AdminLiveSupervisionPage() {
         <div>
           <div className="flex items-center gap-2 text-rose-400 font-bold text-xs mb-1">
             <Activity className="w-4 h-4 animate-pulse" />
-            <span>مركز القيادة اللحظي للطوارئ (Live Supervision Hub)</span>
+            <span>مركز المراقبة اللحظية للطوارئ</span>
           </div>
           <h1 className="text-2xl font-black text-white">
             المراقبة الحية والتدخل الفوري في غرف المزادات
@@ -248,16 +248,16 @@ export default function AdminLiveSupervisionPage() {
                     </div>
                   </div>
 
-                  {/* شريط مؤشر الاشتباه بالذكاء الاصطناعي */}
+                  {/* شريط مؤشر الاشتباه */}
                   <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
                     <span className="text-slate-400 flex items-center gap-1">
                       <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
-                      <span>مؤشر رادار الاحتيال (Shill Score):</span>
+                      <span>مؤشر الاشتباه:</span>
                     </span>
                     <span className={`font-mono font-bold ${
                       room.shillScore > 70 ? 'text-rose-400' : 'text-emerald-400'
                     }`}>
-                      {room.shillScore}% {room.shillScore > 70 ? '(تنبيه احتيال مرتفع)' : '(طبيعي)'}
+                      {room.shillScore}% {room.shillScore > 70 ? '(اشتباه مرتفع)' : '(طبيعي)'}
                     </span>
                   </div>
                 </div>
@@ -293,7 +293,7 @@ export default function AdminLiveSupervisionPage() {
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-400">عدد مرات تمديد Anti-Sniping:</span>
+                <span className="text-slate-400">عدد مرات التمديد لمنع الاحتكار:</span>
                 <span className="font-bold text-amber-400 font-mono">
                   {selectedRoom.timesExtended} / 20
                 </span>
@@ -316,12 +316,12 @@ export default function AdminLiveSupervisionPage() {
                 {selectedRoom.isPaused ? (
                   <>
                     <Play className="w-4 h-4" />
-                    <span>استئناف تشغيل المزاد الحي (Resume)</span>
+                    <span>استئناف تشغيل المزاد الحي</span>
                   </>
                 ) : (
                   <>
                     <Pause className="w-4 h-4" />
-                    <span>تجميد المزاد مؤقتاً للطوارئ (Pause Auction)</span>
+                    <span>تجميد المزاد مؤقتاً للطوارئ</span>
                   </>
                 )}
               </button>
@@ -333,7 +333,7 @@ export default function AdminLiveSupervisionPage() {
                 className="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 font-bold text-xs transition flex items-center justify-center gap-2"
               >
                 <RotateCcw className="w-4 h-4 text-amber-400" />
-                <span>إلغاء المزايدة واسترجاع السعر السابق (Rollback Bid)</span>
+                <span>إلغاء المزايدة واسترجاع السعر السابق</span>
               </button>
 
               {/* زر التمديد اليدوي لوقت المزاد */}

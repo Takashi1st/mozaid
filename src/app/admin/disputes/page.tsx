@@ -71,7 +71,7 @@ const INITIAL_CHAT_MESSAGES: ChatMessage[] = [
   },
   {
     id: 'm-3',
-    sender: 'مسؤول التحكيم بالمنصة (Arbiter)',
+    sender: 'مسؤول التحكيم بالمنصة',
     role: 'arbiter',
     content: 'تم مراجعة تقرير الفحص وصور المعاينة خلال مهلة الـ 48 ساعة. يرجى من الطرفين الاطلاع على تسوية خصم تكلفة الصيانة من رصيد الضمان.',
     time: '09:40 ص',
@@ -91,7 +91,7 @@ export default function AdminDisputesPage() {
 
     const msg: ChatMessage = {
       id: `msg-${Date.now()}`,
-      sender: 'مسؤول التحكيم (Arbiter)',
+      sender: 'مسؤول التحكيم',
       role: 'arbiter',
       content: newMessageText.trim(),
       time: 'الآن',
@@ -243,7 +243,7 @@ export default function AdminDisputesPage() {
                 onClick={() => handleIssueRuling('resolved_split')}
                 className="p-2.5 rounded-xl bg-slate-950 hover:bg-amber-950/60 hover:border-amber-500/60 border border-slate-800 text-xs font-bold transition text-center space-y-0.5 group"
               >
-                <span className="block text-amber-400 group-hover:text-amber-300 text-[11px]">تسوية جزئية (Split)</span>
+                <span className="block text-amber-400 group-hover:text-amber-300 text-[11px]">تسوية ودية ملزمة</span>
                 <span className="text-[9px] text-slate-400 block font-normal">خصم 450K وصرف الباقي</span>
               </button>
 

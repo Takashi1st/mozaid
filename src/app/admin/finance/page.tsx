@@ -47,7 +47,7 @@ const INITIAL_DEPOSITS: DepositSlip[] = [
   {
     id: 'tx-102',
     senderName: 'شركة تهامة للاستيراد والتصدير',
-    channel: 'محفظة ون كاش (OneCash)',
+    channel: 'محفظة ون كاش الإلكترونية',
     refNumber: 'OC-554109',
     amount: 4500000,
     currency: 'YER',
@@ -329,14 +329,14 @@ export default function AdminFinanceCenterPage() {
 
       </div>
 
-      {/* 2. دفتر أستاذ عمولات المنصة 2.5% (Platform Fee Ledger) */}
+      {/* 2. دفتر أستاذ عمولات المنصة 2.5% */}
       <div className="rounded-3xl bg-slate-900 border border-slate-800 p-6 space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
           <div className="flex items-center gap-2">
             <Receipt className="w-5 h-5 text-teal-400" />
-            <h3 className="font-bold text-white text-base">دفتر أستاذ عمولات الوساطة الضامنة (2.5% Escrow Fee Ledger)</h3>
+            <h3 className="font-bold text-white text-base">دفتر أستاذ عمولات الوساطة والضمان (2.5%)</h3>
           </div>
-          <span className="text-xs text-slate-400 font-mono">صفر تسريب مالي • معادلة رياضية موثقة</span>
+          <span className="text-xs text-slate-400 font-mono">صفر تسريب مالي • حساب دقيق</span>
         </div>
 
         <div className="overflow-x-auto">
@@ -345,8 +345,8 @@ export default function AdminFinanceCenterPage() {
               <tr className="border-b border-slate-800 text-slate-400">
                 <th className="py-3 px-3 font-semibold">معرف الصفقة</th>
                 <th className="py-3 px-3 font-semibold">عنوان السلعة / المزاد</th>
-                <th className="py-3 px-3 font-semibold">إجمالي قيمة الصفقة (GMV)</th>
-                <th className="py-3 px-3 font-semibold">عمولة المنصة (2.5%)</th>
+                <th className="py-3 px-3 font-semibold">إجمالي قيمة الصفقة</th>
+                <th className="py-3 px-3 font-semibold">عمولة المنصة 2.5%</th>
                 <th className="py-3 px-3 font-semibold">صافي المحول للبائع (97.5%)</th>
                 <th className="py-3 px-3 font-semibold">تاريخ الإغلاق</th>
               </tr>

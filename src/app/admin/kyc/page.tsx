@@ -38,7 +38,7 @@ const INITIAL_KYC_REQUESTS: KycSubmission[] = [
     userId: 'u-101',
     fullName: 'جمال عبده أحمد القدسي',
     phoneNumber: '771234567',
-    carrier: 'يمن موبايل (YemenMobile)',
+    carrier: 'يمن موبايل',
     nationalIdNumber: '01010045892',
     city: 'تعز',
     aiOcrMatchScore: 98.4,
@@ -51,7 +51,7 @@ const INITIAL_KYC_REQUESTS: KycSubmission[] = [
     userId: 'u-102',
     fullName: 'مؤسسة صعدة للطاقة والمقاولات (ممثل: يحيى شرف)',
     phoneNumber: '734567890',
-    carrier: 'يو (YOU Telecom)',
+    carrier: 'يو للاتصالات',
     nationalIdNumber: '04020011934',
     city: 'صعدة',
     aiOcrMatchScore: 95.1,
@@ -64,7 +64,7 @@ const INITIAL_KYC_REQUESTS: KycSubmission[] = [
     userId: 'u-103',
     fullName: 'وضاح سعيد سالم العامري',
     phoneNumber: '719876543',
-    carrier: 'سبأفون (Sabafon)',
+    carrier: 'سبأفون',
     nationalIdNumber: '02050088120',
     city: 'عدن',
     aiOcrMatchScore: 89.2,
@@ -240,7 +240,7 @@ export default function AdminKycCenterPage() {
             <div className="grid grid-cols-2 gap-3">
               <div className="p-3 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-slate-400 block">مطابقة نصوص البطاقة (OCR):</span>
+                  <span className="text-[10px] text-slate-400 block">مطابقة نصوص البطاقة:</span>
                   <span className="text-emerald-400 font-mono font-black text-base">
                     {selectedItem.aiOcrMatchScore}%
                   </span>
@@ -274,7 +274,7 @@ export default function AdminKycCenterPage() {
                 <span className="text-xs font-semibold text-slate-300">معاينة صورة السيلفي الحية:</span>
                 <div className="h-44 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center p-4 text-center space-y-2">
                   <UserCheck className="w-12 h-12 text-teal-400" />
-                  <span className="text-xs font-bold text-white block">التحقق الحي (Liveness Verified)</span>
+                  <span className="text-xs font-bold text-white block">التحقق الحي المعتمد</span>
                   <span className="text-[10px] text-teal-400 font-mono">مطابقة الملامح: {selectedItem.aiFaceMatchScore}%</span>
                 </div>
               </div>
