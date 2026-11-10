@@ -64,12 +64,12 @@ export async function GET(
       SELECT 
         b.id,
         b.amount,
-        b.is_winning,
+        b.is_winning_bid,
         b.created_at,
         u.full_name as bidder_name,
         u.verification_tier
       FROM bids b
-      JOIN users u ON b.user_id = u.id
+      JOIN users u ON b.bidder_id = u.id
       WHERE b.listing_id = $1
       ORDER BY b.amount ASC, b.created_at DESC
       LIMIT 20;
@@ -87,7 +87,7 @@ export async function GET(
         amount: parseFloat(b.amount),
         bidderName: b.bidder_name,
         verificationTier: b.verification_tier,
-        isWinningBid: b.is_winning,
+        isWinningBid: b.is_winning_bid,
         createdAt: b.created_at,
       })),
     });
